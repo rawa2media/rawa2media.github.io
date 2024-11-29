@@ -1,161 +1,202 @@
-/* General Reset */
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and layout */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    font-family: 'Inter', sans-serif; /* Use Inter font for modern, clean look */
+    background-color: #f9f9f9;
     color: #333;
-    padding: 20px;
+    line-height: 1.6;
+    font-size: 16px; /* Base font size */
 }
 
-/* Header */
+/* Header styles */
 header {
+    background-color: #0099ff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #007bff;
-    padding: 10px 20px;
-    color: white;
+    justify-content: center;
 }
 
-header .logo img {
-    width: 150px;
+header nav ul li {
+    margin: 0 20px;
 }
 
-nav ul {
-    display: flex;
-    list-style-type: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+header nav ul li a:hover {
+    color: #ff6600; /* Hover effect for links */
 }
 
-/* Hero section */
+/* Hero Section */
 #hero {
-    background-color: #008cba;
+    background-color: #3e64ff;
     color: white;
-    padding: 40px 20px;
+    padding: 100px 20px;
     text-align: center;
     border-radius: 8px;
-    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 #hero h1 {
-    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif; /* Poppins for a more stylish header */
+    font-size: 3rem; /* Adjusted for larger screens */
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
 #hero p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.8;
 }
 
-#hero .btn {
-    background-color: #ff7f50;
-    color: white;
+.btn {
+    background-color: #ff6600;
     padding: 10px 20px;
-    border-radius: 5px;
+    color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
-#hero .btn:hover {
-    background-color: #ff6347;
+.btn:hover {
+    background-color: #ff8c00; /* Hover effect for button */
 }
 
-/* Section styling */
-section {
-    margin: 40px 0;
+/* Container for content */
+.container {
+    width: 80%;
+    margin: auto;
 }
 
-section hr {
-    border: 0;
-    border-top: 2px solid #ddd;
-    margin: 30px 0;
-}
-
-section h2 {
-    font-size: 2rem;
-    color: #007bff;
+/* Section Titles */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #003366;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
-section p {
-    font-size: 1.1rem;
+/* Paragraph Text */
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
     margin-bottom: 20px;
+    line-height: 1.8;
 }
 
+/* Team Member Section */
 .team-member {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .team-member h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #0066cc;
+    font-weight: 600;
 }
 
-/* Social links */
+.team-member p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+}
+
+/* Social Media Links */
 .social-links {
     display: flex;
-    gap: 20px;
+    justify-content: space-around;
+    margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 .social-links a {
     display: flex;
     align-items: center;
     text-decoration: none;
+    font-size: 1.2rem;
     color: #333;
-    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 10px;
+    transition: color 0.3s ease;
 }
 
-.social-links .social-icon {
-    width: 24px;
-    height: 24px;
+.social-links a:hover {
+    color: #ff6600; /* Hover effect for social media links */
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
 }
 
-/* Footer */
+/* Footer Section */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #333;
+    padding: 20px 0;
+    background-color: #003366;
     color: white;
-    margin-top: 40px;
+    font-size: 1rem;
 }
 
-/* Mobile responsive */
-@media screen and (max-width: 768px) {
-    header {
+footer p {
+    font-weight: 400;
+}
+
+/* Media Queries for mobile responsiveness */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .social-links {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+    .social-links a {
+        font-size: 1.1rem;
     }
+}
 
-    nav ul li {
-        margin: 5px 0;
-    }
-
+@media (max-width: 480px) {
     #hero h1 {
         font-size: 2rem;
     }
@@ -164,8 +205,23 @@ footer {
         font-size: 1rem;
     }
 
-    .social-links {
-        flex-direction: column;
-        gap: 10px;
+    .container {
+        width: 95%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .team-member h3 {
+        font-size: 1.5rem;
+    }
+
+    .social-links a {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
     }
 }
