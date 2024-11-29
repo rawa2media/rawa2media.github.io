@@ -26,9 +26,6 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="https://drive.google.com/uc?id=1kwJAyGTK_uqluJVYSKzesW6oPqe6aO_s" alt="Rawa2 Media Logo">
-        </div>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -61,7 +58,7 @@
         <div class="container">
             <h2>Our Mission</h2>
             <p>At Rawa2 Media, we are on a mission to create positive change in how people view and interact with their mental health and relationships. Our goal is to normalize mental health conversations, improve self-awareness, and promote healthier relationships by encouraging open dialogue and shared experiences.</p>
-            <p>We welcome sponsors and collaborations, and our platform is ready to work with like-minded brands that support mental health advocacy and self-improvement. Get in touch with us through Instagram direct messages or via email at therawa2media@gmail.com. Stay tuned for upcoming projects, collaborations, and merchandise launches!</p>
+            <p>We welcome sponsors and collaborations, and our platform is ready to work with like-minded brands that support mental health advocacy and self-improvement. Get in touch with us through Instagram direct messages or via email at <a href="mailto:therawa2media@gmail.com">therawa2media@gmail.com</a>. Stay tuned for upcoming projects, collaborations, and merchandise launches!</p>
         </div>
     </section>
     <hr>
@@ -91,6 +88,7 @@
                 <a href="https://www.threads.net/rawa2media" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Threads_logo_2023.png" alt="Threads" class="social-icon">Threads</a>
                 <a href="https://www.youtube.com/@rawa2media" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="social-icon">YouTube</a>
             </div>
+            <p>For inquiries, email us at <a href="mailto:therawa2media@gmail.com">therawa2media@gmail.com</a></p>
         </div>
     </section>
 
@@ -98,5 +96,20 @@
         <p>&copy; 2024 Rawa2 Media. All rights reserved.</p>
     </footer>
 
+    <!-- Add JavaScript for animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Animation for section visibility
+            const sections = document.querySelectorAll('section');
+            window.addEventListener('scroll', () => {
+                sections.forEach((section) => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                        section.classList.add('visible');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
