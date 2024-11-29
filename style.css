@@ -5,58 +5,61 @@
     box-sizing: border-box;
 }
 
-/* Body and Text */
+/* Body and layout */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: white;
-    color: #333;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
 }
 
 /* Header */
 header {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
 }
 
 header .logo img {
-    width: 100px;
+    width: 150px;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
+    list-style-type: none;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #fff;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: darkred;
+    text-decoration: underline;
 }
 
-/* Hero Section */
+/* Hero section */
 #hero {
-    background-color: #333;
+    background-color: #008cba;
     color: white;
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
 #hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 #hero p {
@@ -64,78 +67,105 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.btn {
-    background-color: darkred;
+#hero .btn {
+    background-color: #ff7f50;
     color: white;
     padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
 }
 
-.btn:hover {
-    background-color: #c03030;
+#hero .btn:hover {
+    background-color: #ff6347;
 }
 
-/* About Section */
-#about, #mission, #team, #contact {
-    padding: 40px 20px;
-    text-align: center;
+/* Section styling */
+section {
+    margin: 40px 0;
 }
 
-#about h2, #mission h2, #team h2, #contact h2 {
+section hr {
+    border: 0;
+    border-top: 2px solid #ddd;
+    margin: 30px 0;
+}
+
+section h2 {
     font-size: 2rem;
+    color: #007bff;
     margin-bottom: 20px;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-#about p, #mission p {
+section p {
     font-size: 1.1rem;
-    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-/* Team Section */
 .team-member {
     margin-bottom: 20px;
 }
 
 .team-member h3 {
     font-size: 1.5rem;
-    margin-top: 15px;
-}
-
-.team-member p {
-    font-size: 1.1rem;
-}
-
-/* Contact Section */
-#contact ul {
-    list-style: none;
-}
-
-#contact li {
-    font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
-#contact a {
-    color: darkred;
-    text-decoration: none;
+/* Social links */
+.social-links {
+    display: flex;
+    gap: 20px;
 }
 
-#contact a:hover {
-    color: #c03030;
+.social-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.social-links .social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
 /* Footer */
 footer {
-    background-color: #000;
-    color: #fff;
     text-align: center;
-    padding: 15px 0;
+    padding: 20px;
+    background-color: #333;
+    color: white;
     margin-top: 40px;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
